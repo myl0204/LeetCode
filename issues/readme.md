@@ -1,0 +1,1 @@
+### these solutions didn't accepted by leetcode.com,but work well in browser
