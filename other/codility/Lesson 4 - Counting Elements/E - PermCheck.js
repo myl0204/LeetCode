@@ -1,3 +1,4 @@
+// https://codility.com/programmers/lessons/4-counting_elements/perm_check/
 function solution(A) {
 	A.sort((a, b) => {
 		return a - b
