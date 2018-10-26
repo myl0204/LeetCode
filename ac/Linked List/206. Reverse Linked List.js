@@ -36,11 +36,11 @@ var reverseList = function(head) {
 
     next = current.next;
 
-    current = next;
-
     current.next = result;
 
     result = current;
+
+    current = next;
   }
 
   return result;
