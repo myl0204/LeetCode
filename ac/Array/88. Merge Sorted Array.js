@@ -7,8 +7,18 @@
  * i think m & n doesn't make any sense
  */
 var merge = function(nums1, m, nums2, n) {
-    nums1 = nums1.concat(nums2);
-    nums1.sort(function(a,b){
-        return a - b ;
-    })
+  let i = 0; j = 0;
+  while (j < n) {
+    if (i - j === m ) {
+      nums1[i] = nums2[j];
+      j++;
+    }
+
+    if (nums1[i] > nums2[j]) {
+      nums1.splice(i, 0, nums2[j]);
+      j++
+    }
+    i++;
+  }
+  nums1.length = m + n;
 };
