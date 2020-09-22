@@ -51,4 +51,23 @@ var longestCommonPrefix = function (strs) {
   }
   return firstStr.substring(0, lastN)
 }
+
+var longestCommonPrefix = function (strs) {
+  function compareTwo(str1 = '', str2 = '') {
+    let result = str1
+    for (let i = 0; i < str1.length; i++) {
+      if (str1.charAt(i) !== str2.charAt(i)) {
+        result = str1.substring(0, i)
+        break
+      }
+    }
+    return result
+  }
+  const result =
+    strs.reduce((prev, cur) => {
+      return compareTwo(prev, cur)
+    }, strs[0]) || ''
+
+  return result
+}
 // @lc code=end
